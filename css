@@ -1,0 +1,46 @@
+/* Konfigurasi Warna & Font Dasar */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    color-scheme: dark;
+}
+
+/* Glassmorphism Styles */
+.glass-card {
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-nav {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Navigasi Aktif */
+.nav-link.active {
+    color: #22d3ee;
+    border-bottom: 2px solid #22d3ee;
+}
+
+/* Float Animations */
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0px); 
+    }
+    50% { 
+        transform: translateY(-10px); 
+    }
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+    animation: float 4s ease-in-out 2s infinite;
+}
